@@ -1,0 +1,53 @@
+---
+title: "Math4753 Package Vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Math4753 Package Vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(Math4753Alls0003)
+```
+
+# MATH4753 Package Functions
+
+## myddt
+
+myddt returns the data frame, the relative frequency of a chosen parameter, the subset data frame, and a scatter plot of the data with a quadratic model. 
+```{r}
+library(Intro2R)
+myddt(df=ddt, species="CCATFISH")
+```
+
+## myncurve
+
+myncurve returns a normal distribution curve with the area shaded between the curve and the x-axis from -10000 to x=a. The area of P(x<=a) is also displayed on the plot.
+
+```{r}
+myncurve(mu=10, sigma=2, a=8)
+```
+
+## scatterhist
+
+scatterhist returns a scatter plot with the chosen x and y parameters of a given data set. Also, histograms for both parameter are shown outside of the scatter plot.
+
+```{r}
+{with(ddt, scatterhist(LENGTH,WEIGHT, xlab="Length", ylab="Weight"))}
+```
+
+## mynbin
+
+mynbin returns the negative binomial probability that there are y number of failures before the rth success.
+
+```{r}
+mynbin(y=10,r=3,p=0.4)
+```

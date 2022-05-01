@@ -10,6 +10,8 @@
 #' @return Returns the data frame, the relative frequency of a chosen parameter, the subset data frame, and a scatter plot of the data with a quadratic model.
 #' @export
 #'
+#' @import Intro2R
+#'
 #' @examples
 #' \dontrun{myddt(df=ddt, species="CCATFISH")}
 myddt <- function(df,species, x="LENGTH", y="WEIGHT", col="RIVER"){
